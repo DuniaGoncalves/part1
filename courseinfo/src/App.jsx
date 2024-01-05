@@ -1,10 +1,8 @@
 const Header = ({ course }) => {
-  console.log(course, course.name, 'header');
   return <h1>{course.name}</h1>;
 }
 
 const Part = ({ parts }) => {
-  console.log(parts, "Part");
   return (
     <div>
       {parts.map((part) => (
@@ -17,7 +15,6 @@ const Part = ({ parts }) => {
 }
 
 const Content = ({ course }) => {
-  console.log(course, "content");
   return (
     <Part parts={course.parts} />
   );
