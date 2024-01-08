@@ -1,5 +1,11 @@
 import { useState } from 'react'
 
+const Button = ({ handleClick, text }) => (
+  <button onClick={handleClick}>
+    {text}
+  </button>
+)
+
 const App = () => {
   // save clicks of each button to its own state
   const [good, setGood] = useState(0)
@@ -30,10 +36,10 @@ const App = () => {
   return (
     <div>
       <h2>give feedback</h2>
-      <button onClick={handleGoodClick}>good</button>
-      <button onClick={handleNeutralClick}>neutral</button>
-      <button onClick={handleBadClick}>bad</button>
-      {/* this portion is supposed to be a html table maybe next time */}
+      <Button handleClick={handleGoodClick} text='good' />
+      <Button handleClick={handleNeutralClick} text='neutral' />
+      <Button handleClick={handleBadClick} text='bad' />
+      {/* this portion is supposed to be a html table maybe next time broken out to own component */}
       <h2>statistics</h2>
       <p>good {good}</p>
       <p>neutral {neutral}</p>
