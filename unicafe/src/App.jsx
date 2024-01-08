@@ -13,11 +13,9 @@ const App = () => {
   const [bad, setBad] = useState(0)
   const [total, setTotal] = useState(0)
 
-
   const handleGoodClick = () => {
     const updatedGood = good + 1
     setGood(updatedGood)
-    console.log(updatedGood)
     setTotal(updatedGood + neutral + bad)
   }
 
